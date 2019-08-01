@@ -15,6 +15,16 @@ class CreateBukusTable extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('judul');
+            $table->integer('noisbn');
+            $table->string('penulis');
+            $table->string('penerbit');
+            $table->date('tahun');
+            $table->integer('stok');
+            $table->integer('harga_pokok');
+            $table->integer('harga_jual');
+            $table->integer('ppn');
+            $table->integer('diskon');
             $table->timestamps();
         });
     }
