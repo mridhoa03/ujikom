@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
         // Membuat sample member
         $member=new User();
         $member->name="SampleMember";
-        $member->email="'member@gmail.com";
+        $member->email='member@gmail.com';
         $member->password=bcrypt('rahasia');
         $member->save();
         $member->attachRole($memberRole);
