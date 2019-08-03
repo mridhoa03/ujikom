@@ -36,8 +36,9 @@
                     @guest
                         {{--  Kondisi  --}}
                         @else
+                        @role('admin')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Menu 1</a>
+                                <a class="nav-link" href="{{ url('admin/user') }}">User</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Menu 2</a>
@@ -45,6 +46,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Menu 3</a>
                             </li>
+                        @endrole
                     @endguest
                     </ul>
 
